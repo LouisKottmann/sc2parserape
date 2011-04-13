@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>SC2Replay</Name>
+    <ProjectGuid>{50b49815-16e6-436f-b040-cd82ae5d9bf4}</ProjectGuid>
+    <CompilationMode>Pure</CompilationMode>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SC2Replay</RootNamespace>
+    <AssemblyName>SC2Replay</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+    <OutputPath>bin\Debug\</OutputPath>
+    <TargetKind>dll</TargetKind>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+    <OutputPath>bin\Release\</OutputPath>
+    <TargetKind>dll</TargetKind>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <Name>mscorlib</Name>
+      <AssemblyName>mscorlib.dll</AssemblyName>
+    </Reference>
+    <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <Name>System</Name>
+      <AssemblyName>System.dll</AssemblyName>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="mpqfile.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sc2map.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sc2replay.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sc2replayutils.php">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.config">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Phalanger\2.1\Phalanger.targets" />
+</Project>
