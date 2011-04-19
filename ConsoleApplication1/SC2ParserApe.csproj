@@ -43,7 +43,8 @@
     </Reference>
     <Reference Include="PhpNetCore, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0a8e8c4c76728c71, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\PhpNetCore\v4.0_2.1.0.0__0a8e8c4c76728c71\PhpNetCore.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Phalanger 2.1\Bin\PhpNetCore.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
