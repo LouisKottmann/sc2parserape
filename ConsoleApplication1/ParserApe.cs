@@ -124,11 +124,12 @@ namespace SC2ParserApe
                             PhpArray messageInfo = (messageLogged.Value as PhpArray);
                             Message newMessage = new Message();
                             newMessage.MessageID = System.Convert.ToInt32(messageInfo["id"]);
-                            newMessage.MessageName = UTF8.GetString((messageInfo["name"] as PhpBytes).Data as byte[]);
+                            newMessage.MessageName = ((messageInfo["name"] as PhpBytes) != null ? 
+                                UTF8.GetString((messageInfo["name"] as PhpBytes).Data as byte[]) : "NoName");
                             newMessage.MessageTarget = System.Convert.ToInt32(messageInfo["target"]);
                             newMessage.MessageTime = System.Convert.ToInt32(messageInfo["time"]);
-                            newMessage.MessageContent = UTF8.GetString((messageInfo["message"] as PhpBytes).Data as byte[]);
-
+                            newMessage.MessageContent = ((messageInfo["message"] as PhpBytes) != null ?
+                                UTF8.GetString((messageInfo["message"] as PhpBytes).Data as byte[]) : String.Empty);
                             DataParsed.ChatMessages.Add(newMessage);
                         }
                     }
