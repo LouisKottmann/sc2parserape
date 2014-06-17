@@ -1,9 +1,11 @@
 sc2parserape
 ============
 
+This repository was moved from [google code](https://code.google.com/p/sc2parserape/)
+
 The original parser was ported to .Net using Phalanger.
 
-This project is part of Starcraft II Replay Monkey, a replay analyzer tool, available here: http://code.google.com/p/starcraft2replaymonkey/
+This project is part of Starcraft II Replay Monkey, a replay analyzer tool, available [here](https://github.com/LouisKottmann/starcraft2replaymonkey)
 
 Phalanger is no longer required to be installed for this application to run, 
 however you DO need the Framework .Net 4.0 available 
